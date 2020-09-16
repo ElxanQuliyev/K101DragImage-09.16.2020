@@ -1,0 +1,46 @@
+body {
+  background: goldenrod;
+}
+
+#DragImage {
+  box-shadow: 0 0 20px 0 #888;
+  border-radius: 10px;
+  padding: 40px;
+  background: #fff;
+}
+
+#DragImage .drag-content {
+  padding: 40px;
+  border: 1px dashed brown;
+  text-align: center;
+}
+
+#DragImage .drag-content p {
+  font-size: 1.2em;
+  transition: .4s ease-in-out;
+  pointer-events: none;
+}
+
+#DragImage .drag-content i {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#DragImage .drag-content.active i {
+  opacity: 1;
+  animation: iconAni 1s infinite ease-in-out;
+}
+
+#DragImage .drag-content.active p {
+  transform: translateY(-100%);
+}
+
+@keyframes iconAni {
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(15px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

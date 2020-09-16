@@ -1,0 +1,41 @@
+body{
+    background: goldenrod;
+}
+#DragImage{
+    box-shadow: 0 0 20px 0 #888;
+    border-radius: 10px;
+    padding: 40px;
+    background: #fff;
+    .drag-content{
+        padding: 40px;
+        border:1px dashed brown;
+        text-align: center;
+        p{
+            font-size: 1.2em;
+            transition: .4s ease-in-out;
+            pointer-events: none;
+        }
+        i{
+            opacity: 0;
+            pointer-events: none;
+        }
+        &.active{
+            i{
+                opacity: 1;
+                animation: iconAni 1s infinite ease-in-out;
+            }           
+            p{
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
+
+@keyframes iconAni{
+ from{
+     transform: translateY(-15px);
+ }   
+ to{
+     transform: translateY(15px);
+ }
+}
